@@ -21,13 +21,17 @@ $JumlahPajak = $Produk->Harga * Produk::PAJAK;
 //total
 $total = $Produk ->Harga + $JumlahPajak;
 
+//timpa
+$Harga = "Rp" . number_format($Produk->Harga, 0, ',', '.');
+$Total = "Rp" . number_format($total, 0, ',', '.');
+
 //hasil
 echo  "Produk : ". $Produk->Nama;
 echo "<br>";
-echo  "Harga : ". $Produk->Harga;
+echo  "Harga : ". $Harga;
 echo "<br>";
 echo  "Stok : ". $Produk->Stok;
 echo "<br>";
 echo  "Pajak : ". $Pajak."%";
 echo "<br>";
-echo "Total harga setelah pajak: Rp" . $total;
+echo "Total harga setelah pajak: " . $Total;
